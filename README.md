@@ -37,6 +37,29 @@ Iterating over data
 
 Accessing keys and values
 
+
+✅ Day 3 – Python File Handling (AI/ML QA)
+
+## Concepts Covered
+- Reading CSV files
+- Writing CSV files
+- JSON file handling
+- Data validation
+- QA report generation
+
+## What I Built
+- Prediction counter (Positive/Negative)
+- Confidence score validator
+- Automated QA report generator (qa_report.json)
+
+## Skills Practiced
+- csv.DictReader
+- json.dump()
+- Data validation logic
+- Debugging KeyError issues
+
+This simulates real-world AI model output validation.
+
 A function to classify predictions as Positive/Negative
 
 Converted print-based logic into return-based logic (QA-style)
