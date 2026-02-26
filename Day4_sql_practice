@@ -1,0 +1,72 @@
+-- Create table for model predictions
+CREATE TABLE predictions (
+    id INTEGER PRIMARY KEY,
+    text_review TEXT,
+    predicted_label TEXT,
+    confidence REAL,
+    actual_label TEXT
+);
+
+-- Insert sample data
+INSERT INTO predictions (text_review, predicted_label, confidence, actual_label) VALUES
+('Great product', 'Positive', 0.92, 'Positive'),
+('Worst experience', 'Negative', 0.88, 'Negative'),
+('Not bad', 'Positive', 0.55, 'Negative'),
+('Amazing quality', 'Positive', 0.97, 'Positive'),
+('Terrible service', 'Negative', 0.60, 'Negative'),
+('Okay product', 'Positive', 0.51, 'Positive');
+
+
+SELECT * 
+FROM predictions
+WHERE confidence < 0.6;
+
+
+SELECT text_review, confidence
+FROM predictions
+ORDER BY confidence DESC;
+
+-- Create users table
+CREATE TABLE users (
+    user_id INTEGER PRIMARY KEY,
+    user_name TEXT,
+    country TEXT
+);
+
+#Joins practice
+INSERT INTO users (user_id, user_name, country) VALUES
+(1, 'Ali', 'Pakistan'),
+(2, 'Sara', 'UAE'),
+(3, 'John', 'USA');
+
+
+ALTER TABLE predictions ADD COLUMN user_id INTEGER;
+
+UPDATE predictions SET user_id = 1 WHERE id IN (1,3);
+UPDATE predictions SET user_id = 2 WHERE id IN (2,4);
+UPDATE predictions SET user_id = 3 WHERE id IN (5,6);
+
+
+SELECT p.text_review, u.user_name
+FROM predictions p
+INNER JOIN users u
+ON p.user_id = u.user_id;
+
+SELECT p.text_review, u.user_name
+FROM predictions p
+LEFT JOIN users u
+ON p.user_id = u.user_id;
+
+
+SELECT predicted_label, COUNT(*) as total
+FROM predictions
+GROUP BY predicted_label;
+
+SELECT COUNT(*) as correct_predictions
+FROM predictions
+WHERE predicted_label = actual_label;
+
+
+SELECT *
+FROM predictions
+WHERE predicted_label != actual_label;
