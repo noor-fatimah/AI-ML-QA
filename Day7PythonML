@@ -1,0 +1,7 @@
+Here’s what I explored today:
+
+• Loaded a real dataset using Pandas
+• Peeked into the data with .head()
+• Analyzed statistics using .describe()
+• Checked dataset shape
+• Identified missing values
