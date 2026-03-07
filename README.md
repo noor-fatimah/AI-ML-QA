@@ -1,102 +1,79 @@
-Hi, I'm Noor!
-This repository documents my structured journey into AI/ML Quality Assurance.
+# AI / ML Quality Assurance (QA) Learning Journey
 
-My goal is to build strong Python foundations and transition into AI/ML testing and automation.
+Welcome to my **AI/ML QA Learning Repository**.  
+This repository documents my daily journey of learning **Quality Assurance for Artificial Intelligence and Machine Learning systems**.
 
-📅 Progress So Far:
-✅ Day 1 – Python Basics
+The goal of this is to understand how AI models are tested, validated, and monitored to ensure they work reliably, ethically, and accurately in real-world applications.
 
-Variables
+---
 
-Data types
+## About This Repository
 
-Simple print statements
+In traditional software testing we verify whether software works correctly.  
+However, **AI/ML systems require additional testing** because they depend on data, models, and continuous learning.
 
-✅ Day 2 – Loops, Dictionaries, functions
+In this repository I explore concepts such as:
 
-Lists
+- Data Quality Assurance
+- Model Testing and Validation
+- Bias Detection
+- Model Performance Monitoring
+- Automation for ML testing
+- AI system reliability and robustness
 
-for loops
+Each day I learn a small concept and document it here with notes, examples, and scripts.
 
-while loops
+---
 
-Dictionary creation and iteration
+## What You Will Find Here
 
-Function definitions
+This repository contains:
 
-Parameters & return values
+- Learning notes on **AI/ML QA concepts**
+- Example scripts for **data validation and testing**
+- Mini exercises and experiments
+- Documentation of my **daily learning progress**
 
-Conditional logic
+---
 
-Simulated AI model prediction classification
+## Topics Covered
 
+Some important topics in AI/ML QA include:
 
-📌 Practiced:
+- Data validation and preprocessing checks  
+- Outlier and anomaly detection  
+- Model evaluation metrics (Accuracy, Precision, Recall, F1 Score)  
+- Bias and fairness testing  
+- Model monitoring and drift detection  
+- Automated testing pipelines for ML systems  
 
-Iterating over data
+---
 
-Accessing keys and values
+## Tools & Technologies
 
+During this journey I will be exploring tools such as:
 
-✅ Day 3 – Python File Handling (AI/ML QA)
+- Python
+- Pandas
+- NumPy
+- Jupyter Notebook
+- Git & GitHub
+- Data validation libraries
 
-## Concepts Covered
-- Reading CSV files
-- Writing CSV files
-- JSON file handling
-- Data validation
-- QA report generation
+---
 
-## What I Built
-- Prediction counter (Positive/Negative)
-- Confidence score validator
-- Automated QA report generator (qa_report.json)
+## Learning Goal
 
-## Skills Practiced
-- csv.DictReader
-- json.dump()
-- Data validation logic
-- Debugging KeyError issues
+My goal is to build strong knowledge in **AI/ML Quality Assurance** and understand how to ensure that machine learning systems are **accurate, fair, and reliable** before deployment.
 
-This simulates real-world AI model output validation.
+---
 
+## Connect With Me
 
-✅ Day 4 – SQL for AI/ML QA
-Overview
+I share my daily learning updates on LinkedIn as well.
 
-This project simulates real-world AI/ML QA testing using SQL.
-A sample sentiment analysis prediction dataset was created and validated using SQL queries.
+If you are also learning AI/ML QA or working in AI testing, feel free to connect and share knowledge.
 
-Concepts Practiced
+---
 
-SELECT statements
-
-WHERE filtering
-
-ORDER BY sorting
-
-INNER JOIN and LEFT JOIN
-
-GROUP BY with COUNT()
-
-Model accuracy validation
-
-Misclassification detection
-
-Low-confidence prediction identification
-
-QA Scenarios Covered
-
-Detecting risky predictions (confidence < 0.6)
-
-Checking class distribution to identify bias
-
-Calculating correct vs incorrect predictions
-
-Tracing predictions to users using JOINs
-A function to classify predictions as Positive/Negative
-
-Converted print-based logic into return-based logic (QA-style)
-
-Added basic assertion testing
-
+⭐ If you find this repository useful, consider giving it a star!
