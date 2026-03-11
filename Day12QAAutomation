@@ -1,0 +1,167 @@
+Automation Basics (PyTest)
+What is Automation Testing?
+
+Before automation we were doing:
+
+Manual check:
+
+Check if model prediction is correct
+Check if dataset has missing values
+Check if API returns response
+
+But companies automate these checks.
+
+Example:
+
+Instead of manually checking dataset every day, we write a test script.
+
+The script runs automatically and tells:
+
+✅ PASS
+❌ FAIL
+
+That is Automation QA.
+
+What is PyTest?
+
+PyTest is the most popular Python testing framework.
+
+AI/ML QA engineers use it to test:
+
+ML models
+
+Data pipelines
+
+APIs
+
+predictions
+
+datasets
+Testing ML Prediction
+
+def model_prediction(x):
+    return x * 2
+
+def test_model_prediction():
+    assert model_prediction(5) == 10
+
+Automate Data QA:
+AI models break if data is bad.
+
+So AI QA engineers test:
+
+missing values
+
+invalid values
+
+wrong format
+
+outliers
+
+Automate Data QA
+
+Now we test datasets automatically.
+
+AI models break if data is bad.
+
+So AI QA engineers test:
+
+missing values
+
+invalid values
+
+wrong format
+
+outliers
+
+Test Script:
+
+Example Dataset
+Age, Salary
+25,50000
+30,60000
+None,70000
+22,-1000
+
+Problems:
+
+❌ Missing value
+❌ Negative salary
+
+
+Example Data QA Tests
+import pandas as pd
+
+data = {
+    "age": [25, 30, None, 22],
+    "salary": [50000, 60000, 70000, -1000]
+}
+
+df = pd.DataFrame(data)
+
+
+def test_no_missing_age():
+    assert df["age"].isnull().sum() == 0
+
+
+def test_salary_positive():
+    assert (df["salary"] > 0).all()
+What these tests do
+
+Test 1
+
+Check if dataset has missing values
+
+Test 2
+
+Check if salary is positive
+
+If data is wrong → test FAILS.
+
+This is Data QA automation.
+
+Automate Model QA
+
+Now we test AI model predictions.
+
+AI models can produce:
+
+❌ impossible values
+❌ negative prices
+❌ unrealistic predictions
+
+QA engineers write tests.
+
+Example ML Model
+def predict_price(area):
+    return area * 300
+Test Model Predictions
+
+Create file:
+Code
+def predict_price(area):
+    return area * 300
+
+
+def test_prediction_positive():
+    prediction = predict_price(100)
+    assert prediction > 0
+
+
+def test_prediction_range():
+    prediction = predict_price(50)
+    assert 10000 < prediction < 50000
+What this tests
+
+Test 1
+
+Prediction should be positive
+
+Test 2
+
+Prediction should be in expected range
+
+This is Model QA Automation.
+
+
+
